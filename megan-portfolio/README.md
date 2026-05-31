@@ -1,12 +1,15 @@
----
+# Project Title
+
+Photography portfolio. 
 
 ## Local Development
 
-```bash
+```
+bash
 npm install
 npm run dev
 ```
 
-Visit `http://localhost:5173`
+## Authors
 
----
+Megan Price
