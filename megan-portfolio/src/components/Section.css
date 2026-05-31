@@ -1,0 +1,103 @@
+.section {
+  padding: 7rem 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.section--even { background: rgba(249, 245, 237, 0.74); }
+.section--odd  { background: rgba(237, 230, 214, 0.72); }
+
+.section__blob {
+  position: absolute;
+  width: 500px; height: 500px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--sect-accent, #4b1540) 12%, transparent);
+  filter: blur(90px);
+  pointer-events: none;
+  top: -120px; left: -120px;
+  transition: none;
+}
+
+.section--even .section__blob { top: auto; bottom: -120px; left: auto; right: -120px; }
+
+.section__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.section__layout {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.section__layout--reverse {
+  grid-template-columns: 1.6fr 1fr;
+}
+
+.section__layout--reverse .section__text { order: 2; }
+.section__layout--reverse .section__gallery { order: 1; }
+
+/* Text column */
+.section__index-sans {
+  font-family: var(--sans);
+  font-size: 1.1rem;
+  color: var(--sect-accent, var(--rust));
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.section__sans-sub {
+  font-family: var(--sans);
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.01em;
+}
+
+.section__title {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+  color: var(--text);
+  line-height: 1.1;
+  margin-bottom: 2rem;
+}
+
+.section__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: none;
+  border: 1.5px solid var(--sect-accent, var(--rust));
+  cursor: pointer;
+  font-family: var(--sans);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--sect-accent, var(--rust));
+  padding: 0.5rem 1.2rem 0.55rem;
+  border-radius: 100px;
+  transition: background 0.25s ease, color 0.25s ease, gap 0.25s ease;
+}
+
+.section__cta:hover {
+  background: var(--sect-accent, var(--rust));
+  color: var(--warm-white);
+  gap: 0.9rem;
+}
+
+@media (max-width: 900px) {
+  .section { padding: 5rem 1.5rem; }
+
+  .section__layout,
+  .section__layout--reverse {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .section__layout--reverse .section__text,
+  .section__layout--reverse .section__gallery { order: unset; }
+}
