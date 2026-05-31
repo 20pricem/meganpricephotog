@@ -7,7 +7,6 @@ export default function Hero() {
     <section className="hero">
 
       <div className="hero__content">
-        {/* Handwritten top label */}
         <p className="hero__hand-top">photography & design ✦</p>
 
         <h1 className="hero__title">
