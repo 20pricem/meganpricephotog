@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
 import Nav from './components/Nav'
 import Footer from './components/Footer'
+import ScrollToTop from './components/ScrollToTop'
 import PortfolioPage from './pages/PortfolioPage'
 import AboutPage from './pages/AboutPage'
 import './App.css'
@@ -46,6 +47,7 @@ export default function App() {
   return (
     <div className="app">
       <Nav sections={sections} />
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<PortfolioPage />} />
         <Route path="/about" element={<AboutPage />} />
