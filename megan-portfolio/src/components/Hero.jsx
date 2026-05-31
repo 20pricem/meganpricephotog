@@ -7,13 +7,14 @@ export default function Hero() {
     <section className="hero">
 
       <div className="hero__content">
-        <p className="hero__hand-top">photography & design ✦</p>
 
+        <p className="hero__sans-top">photography & design</p>
+      
         <h1 className="hero__title">
           <span className="hero__title-serif">Megan</span>
           <span className="hero__title-serif">Price</span>
         </h1>
-
+        
         <div className="hero__cta-row">
           <button
             className="hero__btn"
