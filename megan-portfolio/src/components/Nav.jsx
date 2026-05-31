@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
-import logo from '../assets/meganprice.png'
+import logo from '../assets/logo.png'
 import './Nav.css'
 
 export default function Nav({ sections }) {

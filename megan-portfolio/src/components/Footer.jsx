@@ -9,10 +9,6 @@ export default function Footer() {
       <div className="footer__blob" />
       <div className="footer__inner">
         <div className="footer__top">
-          <div className="footer__brand">
-             <img src={logo} alt="Megan Price" className="footer__logo-img" />
-            <span className="footer__tagline">photography &amp; design ✦</span>
-          </div>
           <div className="about__links">
             <p className="footer__tagline">let's work together</p>
             <a
