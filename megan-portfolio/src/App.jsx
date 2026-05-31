@@ -25,9 +25,9 @@ const sections = [
     images: sectionImages.concerts || [],
   },
   {
-    id: 'editorial',
-    label: 'Editorial',
-    title: 'Editorial Shoots',
+    id: 'creative',
+    label: 'Creative',
+    title: 'Creative Shoots',
     handLabel: 'fashion & narrative',
     accent: '#9c6b4e',
     images: sectionImages.stylized || [],

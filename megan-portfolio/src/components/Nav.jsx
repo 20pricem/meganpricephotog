@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
-import logo from '../assets/logo.png'
 import './Nav.css'
 
 export default function Nav({ sections }) {
@@ -18,7 +17,6 @@ export default function Nav({ sections }) {
   const handlePortfolioNav = (id) => {
     setMenuOpen(false)
     if (location.pathname !== '/') {
-      // Go home first, then scroll after navigation
       navigate('/')
       setTimeout(() => {
         navigate(`/gallery/${id}`)
@@ -33,7 +31,7 @@ export default function Nav({ sections }) {
   return (
     <header className={`nav${scrolled ? ' nav--scrolled' : ''}${menuOpen ? ' nav--open' : ''}`}>
       <button className="nav__logo" onClick={() => { navigate('/'); window.scrollTo({ top: 0, behavior: 'smooth' }) }}>
-        <img src={logo} alt="Megan Price" className="nav__logo-img" />
+        <p className="nav__logo-name">MP</p>
       </button>
 
       <button className="nav__hamburger" onClick={() => setMenuOpen(o => !o)} aria-label="Toggle menu">
