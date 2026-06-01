@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
 import './Nav.css'
+import logo from '../assets/logo.png'
 
 export default function Nav({ sections }) {
   const [scrolled, setScrolled] = useState(false)
@@ -31,7 +32,7 @@ export default function Nav({ sections }) {
   return (
     <header className={`nav${scrolled ? ' nav--scrolled' : ''}${menuOpen ? ' nav--open' : ''}`}>
       <button className="nav__logo" onClick={() => { navigate('/'); window.scrollTo({ top: 0, behavior: 'smooth' }) }}>
-        <p className="nav__logo-name">MP</p>
+        <img className="nav__logo-img" src={logo} alt="Megan Price logo" />
       </button>
 
       <button className="nav__hamburger" onClick={() => setMenuOpen(o => !o)} aria-label="Toggle menu">
@@ -52,7 +53,7 @@ export default function Nav({ sections }) {
           className="nav__cta"
           onClick={() => { setMenuOpen(false); navigate('/about') }}
         >
-          say hello ✉
+          say hello
         </button>
       </nav>
     </header>

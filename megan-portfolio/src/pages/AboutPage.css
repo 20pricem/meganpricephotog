@@ -1,5 +1,5 @@
 .about {
-  --about-accent: #c02d8c;
+  --about-accent: #4b1540;
   min-height: 100vh;
   background: transparent;
   padding: 10rem 3rem 7rem;
@@ -186,7 +186,7 @@
 }
 
 .about__link--insta { color: var(--about-accent); }
-.about__link--email { color: var(--taupe); }
+.about__link--email { color: var(--text-muted); }
 
 .about__link-icon {
   width: 20px; height: 20px;
