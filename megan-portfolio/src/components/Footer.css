@@ -64,8 +64,12 @@
 
 .footer__tagline {
   font-family: var(--sans);
-  font-size: 1rem;
-  color: var(--footer-accent);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: white;
+  text-transform: uppercase;
+  opacity: 0.9;
 }
 
 .footer__contact-sans {

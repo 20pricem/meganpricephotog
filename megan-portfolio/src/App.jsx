@@ -11,7 +11,7 @@ import sectionImages,{highlights} from './lib/sections'
 const sections = [
   {
     id: 'portraits',
-    label: 'Portraits',
+    label: 'PORTRAITS',
     title: 'Portrait Photography',
     handLabel: 'weddings, grads & more',
     accent: '#4b1540',
@@ -19,7 +19,7 @@ const sections = [
   },
   {
     id: 'concerts',
-    label: 'Concerts',
+    label: 'CONCERTS',
     title: 'Concert Photography',
     handLabel: 'live music & festivals',
     accent: '#7a6652',
@@ -27,7 +27,7 @@ const sections = [
   },
   {
     id: 'creative',
-    label: 'Creative',
+    label: 'CREATIVE',
     title: 'Creative Shoots',
     handLabel: 'fashion & narrative',
     accent: '#9c6b4e',
@@ -35,7 +35,7 @@ const sections = [
   },
   {
     id: 'graphics',
-    label: 'Graphics',
+    label: 'GRAPHICS',
     title: 'Graphics',
     handLabel: 'design & composites',
     accent: '#6b7c5e',

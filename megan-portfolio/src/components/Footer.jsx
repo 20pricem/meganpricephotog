@@ -1,6 +1,4 @@
 import './Footer.css'
-import logo from '../assets/meganpricew.png'
-
 
 export default function Footer() {
 
@@ -10,7 +8,7 @@ export default function Footer() {
       <div className="footer__inner">
         <div className="footer__top">
           <div className="about__links">
-            <p className="footer__tagline">let's work together!</p>
+            <p className="footer__tagline">LET'S WORK TOGETHER</p>
             <a
               href={`https://instagram.com/meganpricephotog`}
               target="_blank"

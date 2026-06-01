@@ -6,7 +6,7 @@ function formatAltText(filename) {
 }
 
 const files = Object.entries(
-  import.meta.glob('../assets/*/*.{jpg,jpeg,png}', { eager: true, query: '?url', import: 'default' })
+  import.meta.glob('../assets/*/*.{jpg,jpeg,png,webp}', { eager: true, query: '?url', import: 'default' })
 )
   .map(([path, url]) => {
     const folder = path.split('/').slice(-2, -1)[0]
