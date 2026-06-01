@@ -24,7 +24,7 @@ export default function Footer() {
             </a>
             <a
               href={`mailto:20pricem@gmail.com`}
-              className="about__link about__link--email"
+              className="footer__link footer__link--email"
             >
               <svg className="about__link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                 <rect x="2" y="4" width="20" height="16" rx="2"/>

@@ -180,13 +180,18 @@
   width: fit-content;
 }
 
-.about__link:hover {
+.about__link--insta { color: var(--about-accent); }
+.about__link--email { color: var(--text-muted); }
+
+.about__link--email:hover {
+  gap: 0.6rem;
+  opacity: 1;
+}
+
+.about__link--insta:hover {
   gap: 0.9rem;
   opacity: 0.75;
 }
-
-.about__link--insta { color: var(--about-accent); }
-.about__link--email { color: var(--text-muted); }
 
 .about__link-icon {
   width: 20px; height: 20px;

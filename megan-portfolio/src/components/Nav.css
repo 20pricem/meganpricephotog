@@ -1,7 +1,7 @@
 .nav {
   position: fixed;
   top: 0; left: 0; right: 0;
-  z-index: 100;
+  z-index: 10001;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -15,6 +15,15 @@
   -webkit-backdrop-filter: blur(14px);
   padding: 1rem 3rem;
   border-bottom: 1px solid var(--border-warm);
+}
+
+/* When the mobile menu is open, disable the header's backdrop-filter
+   so the fixed menu overlay is positioned relative to the viewport
+   (avoids containing-block issues on some browsers). */
+.nav--open.nav--scrolled,
+.nav--scrolled.nav--open {
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 }
 
 .nav__logo {
@@ -114,7 +123,7 @@
   border: none;
   cursor: pointer;
   padding: 4px;
-  z-index: 101;
+  z-index: 10002;
 }
 
 .nav__hamburger span {
@@ -144,8 +153,11 @@
     justify-content: center;
     align-items: center;
     gap: 2rem;
+    z-index: 20001;
   }
 
-  .nav--open .nav__links { display: flex; }
+  .nav--open .nav__links { 
+    display: flex;
+  }
   .nav__link { font-size: 1rem; }
 }
