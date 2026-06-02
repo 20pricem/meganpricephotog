@@ -123,7 +123,8 @@
   border: none;
   cursor: pointer;
   padding: 4px;
-  z-index: 10002;
+  position: relative;
+  z-index: 20003;
 }
 
 .nav__hamburger span {
