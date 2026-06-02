@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import ImageModal from '../components/ImageModal'
 import './GalleryPage.css'
@@ -36,6 +36,17 @@ export default function GalleryPage({ sections, highlights }) {
   const { sectionId } = useParams()
   const [selectedImage, setSelectedImage] = useState(null)
   const [selectedBandName, setSelectedBandName] = useState(null)
+  const [lazyLoadOnMobile, setLazyLoadOnMobile] = useState(true)
+
+  useEffect(() => {
+    if (typeof navigator === 'undefined') return
+
+    const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection
+    const onSlowNetwork = connection?.saveData || ['slow-2g', '2g', '3g'].includes(connection?.effectiveType)
+    const onSmallScreen = window.innerWidth <= 700
+
+    setLazyLoadOnMobile(onSlowNetwork || onSmallScreen)
+  }, [])
 
   const images = useMemo(() => {
     if (sectionId === 'highlights') return highlights
@@ -67,7 +78,12 @@ export default function GalleryPage({ sections, highlights }) {
                   setSelectedBandName(bandName)
                 }}
               >
-                <img src={image.src} alt={image.alt || ''} loading="eager" />
+                <img
+                  src={image.src}
+                  alt={image.alt || ''}
+                  decoding="async"
+                  loading={lazyLoadOnMobile ? 'lazy' : 'eager'}
+                />
                 {bandName && <span className="gallery-item__label">{bandName}</span>}
               </div>
             )
