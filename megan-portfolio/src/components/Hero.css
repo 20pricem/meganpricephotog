@@ -15,7 +15,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url('../assets/sarah.jpg');
+  background-image: url('../assets/sarah.webp');
   background-size: cover;
   background-position: center 38%;
   opacity: 0.78;

@@ -1,6 +1,6 @@
 import './AboutPage.css'
-import photoStrip from '../assets/photostrip.jpg'
-import skinnyPhotoStrip from '../assets/skinnyphotostrip.jpg'
+import photoStrip from '../assets/photostrip.webp'
+import skinnyPhotoStrip from '../assets/skinnyphotostrip.webp'
 
 const BIO = {
   name: 'Megan Price',
@@ -70,7 +70,7 @@ export default function AboutPage() {
             <a
               href={`mailto:${BIO.email}`}
               className="about__link about__link--email"
-            >
+            >d
               <svg className="about__link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                 <rect x="2" y="4" width="20" height="16" rx="2"/>
                 <path d="m2 7 10 7 10-7"/>
