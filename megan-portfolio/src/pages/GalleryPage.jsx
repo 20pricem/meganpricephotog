@@ -67,7 +67,7 @@ export default function GalleryPage({ sections, highlights }) {
                   setSelectedBandName(bandName)
                 }}
               >
-                <img src={image.src} alt={image.alt || ''} loading="lazy" />
+                <img src={image.src} alt={image.alt || ''} loading="eager" />
                 {bandName && <span className="gallery-item__label">{bandName}</span>}
               </div>
             )
